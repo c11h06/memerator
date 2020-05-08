@@ -1,0 +1,41 @@
+body {
+    background-color: darkseagreen;
+}
+* {
+    font-family: "Arial";
+}
+
+.upper, .lower {
+    padding: 30px;
+    font-size: 40px;
+    font-family: "Impact";
+    color: white;
+    text-shadow: black 0px 0px 10px;
+    position: absolute;
+    text-align: center;
+    }
+
+    .upper {
+        top: 30px;
+        left: 20px;
+    }
+    .lower {
+        bottom: 30px;
+        left: 60px;
+    }
+
+img {
+    padding: 15px;
+    width: 400px;
+    height: 400px;
+}
+
+.container {
+    text-align: center;
+}
+ 
+.frame {
+    position: relative;
+}
+
+

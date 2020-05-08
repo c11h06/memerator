@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Meme Central</title>
+<h1>Let's make some memes!</h1>
+<link rel="stylesheet" href="memestyle.css">
+    </head>
+    <body>
+        <form id="container" action="#">
+        <div class="container">
+            <div class="picture">
+                <label for="piclink">Link your picture here!</label>
+                <input type="text" id="piclink">
+            </div><br>
+            <div class="uppertext">
+                <label for="uppertext">What will the top say?</label>
+                <input type="text" id="uppertext">
+            </div><br>
+            <div class="lowertext">
+                <label for="lowertext">And the bottom?</label>
+                <input type="text" id="lowertext">
+            </div><br>
+            <button type="submit">Let's get memeing!</button> 
+            </div>
+        </form>
+    </body>
+    <script>
+        
+        let container = document.getElementById("container");
+
+        container.addEventListener("submit", function(){
+            let frame = document.createElement("div");
+            frame.className = "frame";
+
+            let pic = document.createElement("img");
+            pic.className = "meme";
+            pic.src = String(document.getElementById("piclink").value);
+
+            let toptext = document.createElement("div");
+            toptext.className = "upper";
+            toptext.innerHTML = String(document.getElementById("uppertext").value);
+
+            let lowertext = document.createElement("div");
+            lowertext.className = "lower";
+            lowertext.innerHTML = String(document.getElementById("lowertext").value);
+            
+            frame.appendChild(pic);
+            frame.appendChild(toptext);
+            frame.appendChild(lowertext);
+            document.body.appendChild(frame);
+
+            event.preventDefault();
+        })
+    </script>
+</html>
